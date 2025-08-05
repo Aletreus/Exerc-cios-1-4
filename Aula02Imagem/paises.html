@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reino Unido</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            height: 713px;
+            background: linear-gradient( rgb(64, 64, 64), rgb(176, 176, 176)) no-repeat;
+        }
+        .bandeiras{
+            width: 250px;
+            height: 150px;
+            margin-right: 50px;
+            transition: transform 0.3s ease;
+        }
+        #main{
+            width: 850px;
+            height: 180px;
+            display: inline-flex;
+            /*background-color: blue;*/
+        }
+        #main2{
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+            /*background-color: aqua;*/
+        }
+        h1{
+            color:beige;
+        }
+        #nomes{
+            width: 850px;
+            display: inline-flex;
+            /*background-color: black;*/
+        }
+        .titulos{
+            margin-top: 0px;
+            transition: transform 0.3s ease;
+        }
+        #inglaterra{
+            margin-left: 50px;
+        }
+        #escocia{
+            margin-left: 170px;
+        }
+        #irlanda{
+            margin-left: 120px;
+            
+        }
+        #reino{
+            width: 250px;
+            text-align: center;
+            margin: auto;
+            /*background-color: blueviolet;*/
+        }
+        a{
+            text-decoration: none;
+        }
+        .bandeiras:hover {
+            transform: scale(1.2);
+        }
+        .titulos:hover {
+            transform: scale(1.2);
+        }
+        #main3{
+            /*background-color: brown;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="main2">
+        <div id="main">
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Inglaterra" target="_blank"><img src="../ICONES/inglaterra.png" alt="" class="bandeiras"></a>
+            </div>
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Esc%C3%B3cia" target="_blank"><img src="../ICONES/escocia.png" alt="" class="bandeiras"></a>
+            </div>
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Irlanda_do_Norte" target="_blank"><img src="../ICONES/irlanda.jpg" alt="" class="bandeiras"></a>
+            </div>
+        </div>
+        <br>
+        <div id="nomes">
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Inglaterra" target="_blank">
+                    <h1 class="titulos" id="inglaterra">Inglaterra</h1>
+                </a>
+            </div>
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Esc%C3%B3cia" target="_blank">
+                    <h1 class="titulos" id="escocia">Escócia</h1>
+                </a>
+            </div>
+            <div>
+                <a href="https://pt.wikipedia.org/wiki/Irlanda_do_Norte" target="_blank">
+                    <h1 class="titulos" id="irlanda">Irlanda do Norte</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main3">
+        <div id="reino">
+            <a href="https://pt.wikipedia.org/wiki/Reino_Unido" target="_blank"><img src="../ICONES/reinoUnido.jpg" alt="" class="bandeiras"></a>
+            <a href="https://pt.wikipedia.org/wiki/Reino_Unido" target="_blank">
+                <h1 class="titulos" id="unido">Reino Unido</h1>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
