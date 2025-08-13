@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coife</title>
+    <link rel="shortcut icon" href="../ICONES/IconeCoifeInvertida.png" type="image/x-icon">
+</head>
+<style>
+    body{
+        margin: 0px;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 40px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.304);
+    }
+    #logoCoife{
+        width: 170px;
+        margin-top: 3px;
+    }
+    #menu{
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        font-size: 30px;
+        border: 0px;
+        cursor: pointer;
+        background-color: white;
+        transition: transform 0.1s ease;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.051);
+    }
+    #menu:hover{
+        transform: scale(1.1);
+    }
+    #divCoife{
+        text-align: center;
+    }
+    #imgFundo{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        filter:brightness(45%);
+    }
+    .paragrafos{
+        text-align: justify;
+        height: 150px;
+        width: 100%;
+        margin-left: 25px;
+        margin-right: 25px;
+        transition: transform 0.2s ease;
+        cursor: default;
+    }
+    .paragrafos:hover{
+        transform: scale(1.06);
+    }
+    .animacao{
+        transition: transform 0.2s ease;
+    }
+    .animacao:hover{
+        transform: scale(1.06);
+    }
+    .botao{
+        background-color: rgba(240, 248, 255, 0);
+        border: 0px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700;
+        color: rgb(26, 26, 26);
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .botao:hover{
+        transform: scale(1.05);
+        color:#723f00;
+    }
+    #sideMenu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    }
+
+    #sideMenu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #sideMenu ul li {
+        padding-left: 20px;
+    }
+    #sideMenu li{
+        height: 50px;
+    }
+    #sideMenu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        display: block;
+    }
+
+    #sideMenu ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    #sideMenu.active {
+        left: 0;
+    }
+    #closeMenu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #333;
+    }
+    #closeMenu:hover {
+        color: #ff8c09;
+    }
+</style>
+<body>
+    <nav id="sideMenu">
+        
+    <button id="closeMenu">×</button>
+    <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">A Coife</a></li>
+        <li><a href="#">Clínicas</a></li>
+        <li><a href="#">Tratamentos</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
+    <figure style="margin: 0px; padding: 0px; cursor:default;">
+        <div style="width: 100%; height: 600px; overflow: hidden;">
+            <img src="../ICONES/Dentista.jpg" alt="" id="imgFundo">
+        </div>
+        <div style="height: 50px; position: absolute; top: 25%; text-align: center; width: 100%;">
+            <figcaption style="font-size: 150px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(26, 26, 26);"><b style="color: #ff8c09; margin: auto;">Coife</b>Odonto</figcaption>
+        </div>
+        <div style="width: 100%; height: 50px; position: absolute; top: 47%; text-align: center;">
+            <figcaption style="color: rgb(255, 255, 255); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px;"><b>Cuidando do seu Sorrido.</b></figcaption>
+            <figcaption>
+                <img src="../ICONES/IconeCoifeInvertida.png" alt="" style="position: absolute; top: 0%; left: 56%; width: 20px;">
+            </figcaption>
+        </div>
+    </figure>
+    <header>
+        <button id="menu">≡</button>
+        <div id="divCoife">
+            <a href="siteApresentavel.html"><img src="../ICONES/IconeCoifeInvertida2.png" alt="" id="logoCoife" style="cursor: pointer;"></a>
+        </div>
+    </header>
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px; ">
+        <img src="../ICONES/IconeCoifeInvertida2.png" alt="" style="cursor: pointer;" class="animacao">
+    </div>
+    <div style="text-align: center; height: 300px;">
+        <div style="display: inline-flex;height: 100%;">
+            <div class="paragrafos">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos voluptate autem libero, illum est commodi iusto maxime iure possimus itaque sapiente, optio mollitia delectus animi esse alias ad pariatur vero. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur neque consequatur itaque. Nemo, perferendis? Consequatur, libero nesciunt! Sunt voluptates eos consectetur distinctio, magnam est tempora veritatis corporis eligendi necessitatibus at? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum vero quae fuga reprehenderit nisi dolorem eius facilis perferendis dolore. Reiciendis temporibus dolores, nihil nemo quis maiores quidem nam. Officia, explicabo? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates eveniet, culpa rem minima nostrum velit itaque corporis placeat reiciendis quam, cumque ex magni animi unde modi quidem at possimus.</p>
+            </div>
+            <div class="paragrafos">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione id, blanditiis ipsa aperiam amet expedita eos, perspiciatis voluptate consequatur sapiente neque? Incidunt, eos deserunt maxime autem voluptate sunt dolore repudiandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores minus nisi quo animi perferendis ea sint expedita illum mollitia fugit. Quo ducimus ipsum sapiente iure inventore ea neque dolor at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolor quae! Quis mollitia, at inventore omnis libero expedita. Unde laboriosam vel sed impedit eaque aliquam nihil quo similique porro eveniet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo et neque obcaecati recusandae eos magnam laudantium tempore repudiandae voluptatibus dolorem quaerat eius ab debitis, dolore tenetur velit libero totam possimus.</p>
+            </div>
+            <div class="paragrafos">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur enim unde cum. Ea laboriosam alias, perspiciatis iste mollitia odit veritatis maxime blanditiis minus qui cumque, facilis maiores aliquam amet officiis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore soluta explicabo veniam temporibus at dolorem natus ut accusantium! Culpa magni nihil explicabo cupiditate pariatur delectus fuga nobis tempore earum consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo ipsum reiciendis, quos similique repellendus. Aliquid ducimus aspernatur provident saepe tempora odio reprehenderit voluptatem consequuntur, itaque eaque rem. Vitae, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni debitis harum deleniti possimus eum ratione distinctio dolore dicta non, cum, molestiae sapiente necessitatibus reiciendis iure deserunt repellendus consequuntur rerum. Dicta.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <FOOTER>
+        <div style="background-color: #ff8c09; height: 180px; text-align: center;">
+            <div style="display: inline-flex; margin-top: 15px;">
+                <div>
+                    <button class="botao">A Coife</button>
+                </div>
+                <div>
+                    <button class="botao">Clínicas</button>
+                </div>
+                <div>
+                    <button class="botao">Tratamentos</button>
+                </div>
+                <div>
+                    <button class="botao">Contato</button>
+                </div>
+                <div>
+                    <button class="botao">Trabalhe Conosco</button>
+                </div>
+                <div>
+                    <button class="botao">Privacidade</button>
+                </div>
+                <div>
+                    <button class="botao">Política de Cookies</button>
+                </div>
+                <div>
+                    <button class="botao">Portal do Franqueado</button>
+                </div>
+            </div>
+            <div style="margin-top: 30px; color: rgb(26, 26, 26);">
+                <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 14px;">Fone: (49) 99999-9999 | example@gmail.com <br>Avenida Brigadeiro Faria Lima, 2.894, Jardim Do Taquaras, <br> Santa Catarina-SC, CEP 99999-888</p>
+            </div>
+            <footer>
+                <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><i>@_matheus.049</i></p>
+            </footer>
+        </div>
+    </FOOTER>
+</body>
+<script>
+    const menuButton = document.getElementById('menu');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    menuButton.addEventListener('click', () => {
+        sideMenu.classList.add('active');
+    });
+    closeMenu.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+    });
+</script>
+</html>
