@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Inteligente</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-color: #212121;
+        margin-bottom: 150px;
+    }
+    #main{
+        background-color: #303030;
+        width: 600px;
+        height: 40px;
+        border-radius: 50px;
+        align-items: center;
+        padding: 6px;
+        padding-left: 0px;
+        
+    }
+    #submitButton{
+        background-color: #FFFFFF;
+        border-radius: 999px;
+        width: 50px;
+        height: 50px;
+        border: 0px;
+        text-align: center;
+        align-items: center;
+        padding-top: 3px;
+        margin-left: 15px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    #submitButton:hover{
+        transform: scale(1.1);
+    }
+    #input1{
+        width: 85%;
+        height: 35px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        background-color: #21212100;
+        border: 0px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #ffffff;
+    }
+     #input1:focus {
+      outline: none;
+      box-shadow: 0 0 0 0;
+    }
+    #main1{
+        text-align: center;
+        display: inline-flex;
+        margin-left: 28%;
+        position:fixed;
+        bottom: 15px;
+    }
+    .animacao{
+        transition: transform 0.2s ease;
+    }
+    .animacao:hover{
+        transform: scale(1.05);
+    }
+</style>
+<body>
+    <header style="position: fixed; height: 45px; background-color: #30303000; width: 100%; text-align: left;">
+        <img src="../ICONES/chatgpt.png" alt="" style="width: 110px; margin-top: 7px; margin-left: 25px;">
+        <button style="margin-left: 70%; padding: 4px; border-radius: 20px; border-style: solid; border-color: #30303000; cursor: pointer; font-size: 12px;" class="animacao">Entrar</button>
+        <button style="margin-left: 8px; border-radius: 20px; padding: 5px; margin-right: 8px; background-color: #21212100; color: #FFFFFF; border-style: solid; border-color: #303030; font-size: 12px; cursor: pointer;" class="animacao">Cadastre-se Gratruitamente</button>
+        <abbr title="Use as variações das palavras-chave para conversar com o chat. (Computação, IaaS, PaaS, SaaS, Infraestrutura, Virtualização)"><button style="width: 30px; height:30px; margin-top: 5px;  font-size:20px; border-radius: 999px; background-color: #21212100; color: #FFFFFF; border-color: #FFFFFF; cursor: pointer; border-style: solid;">?</button></abbr>
+    </header>
+    <div style="height: 80px;">
+
+    </div>
+    <div style="width: 600px; margin: auto; color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 80%; text-align: justify;">
+        <p id="resultado"></p>
+        <img src="" alt="" style="width: 250px; border-radius: 10px; margin-top: 20px;" id="imagem">
+    </div>
+    
+    <div id="main1">
+        <div id="main" >
+            <label for="input1"></label>
+            <input type="text" id="input1" placeholder="Pergunte alguma coisa...">
+        </div>
+        <button id="submitButton" onclick="pesquisar()">
+                    <img src="../ICONES/seta.png" alt="" style="width: 22px;">
+                </button>
+        <div>
+    
+</body>
+ <script>
+    const input = document.getElementById('input1');
+    const botao = document.getElementById('submitButton');
+    const resultado = document.getElementById('resultado');
+    const computacao = document.getElementById('computacao');
+    input.focus();
+    var computacaoLista = ['computação em nuvem', 'computação', 'computacao', 'computacaoemnuvem', 'co', 'com', 'comp', 'compu', 'comput', 'computa', 'computac', 'computaca', 'computaça', 'computaçã', 'computacã', 'computacaoem nuvem', 'c', 'computacao em nuvem']
+    var infraestruturaLista = ["infraestrutura de ti","infraestrutura","infrestrutura",  "infra","infr","infraes","infraest","infraestr","infraestru","infraestrut","infraestrutu","infraestrutur","infraestruturade","infraestrutura de","infraestrutura d","infraestrutura de t","infraestruturadeti","infraestruturadeti", "inf" ];
+    var saasLista = ["saas","s","sa","saa"];
+    var paasLista = ["paas","p","pa","paa","paas"];
+    var iaasLista = ["iaas","i","ia","iaa","iaas"];
+    var virtualizacaoLista = ["virtualização","virtualizacao","v","vi","vir","virt","virtu","virtua","virtual","virtuali","virtualiz","virtualiza","virtualizaç","virtualizac","virtualizaçao",  "virtualizacao"];
+
+    function pesquisar(){
+    const conteudo = input.value.toLowerCase().trim();
+
+    if(computacaoLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">Computação em Nuvem</button>
+                </div>
+                <p>Prontinho aqui está. <br><br><strong> • Computação em Nuvem:</strong> A computação em nuvem é basicamente a utilização de recursos de TI, como servidores e armazenamento, pela internet. Em vez de manter tudo fisicamente, posso acessar essas ferramentas de qualquer lugar. A "nuvem" oferece flexibilidade e escalabilidade, permitindo que eu aumente ou diminua os recursos conforme necessário, sem precisar comprar equipamentos novos. Com ela posso acessar dados e aplicativos de qualquer dispositivo com internet.</p>
+                <img src="../ICONES/computacaoEmNuvem.jpg" style="width: 250px; border-radius: 10px; margin-top: 30px;">
+            </div>`;
+    } else if(infraestruturaLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">Infraestrutura de TI</button>
+                </div>
+                <p><strong> • Infraestrutura de TI:</strong> É o conjunto de recursos de TI necessários para que uma empresa funcione de forma eficiente. Como servidores, redes, sistemas de armazenamento e todo o hardware e software que permitem o processamento e a troca de informações. A infraestrutura de TI pode ser tanto física, com equipamentos de servidores e cabos, quanto virtual, com a computação em nuvem. Uma boa infraestrutura é importante para garantir a segurança dos dados e a agilidade no acesso ao sistema.</p>
+                <img src="../ICONES/infraestruturaTI.png" style="width: 250px; border-radius: 10px; margin-top: 30px;">
+            </div>`;
+    } else if(saasLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">SaaS</button>
+                </div>
+                <p><strong> • SaaS:</strong> É um modelo de distribuição de software em que o programa é hospedado na nuvem e acessado pela internet, sem necessidade de instalação local. Ao invés de comprar e instalar o software, o usuário paga uma assinatura para usar a aplicação via navegador, como o Google Docs ou o Office 365. Tudo fica gerenciado na nuvem.</p>
+                <img src="../ICONES/saas.png" style="width: 250px; border-radius: 10px; margin-top: 30px;">
+            </div>`;
+    } else if(paasLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">PaaS</button>
+                </div>
+                <p><strong> • PaaS:</strong> É um modelo de computação em nuvem que oferece uma plataforma completa para o desenvolvimento, execução e gerenciamento de aplicativos. Ele fornece ferramentas e serviços como bancos de dados, servidores e ambientes de desenvolvimento, permitindo que os desenvolvedores se concentrem apenas no código e na criação das aplicações, sem se preocupar com a infraestrutura subjacente. Como exemplo de PaaS temos o Microsoft Azure.</p>
+                <img src="../ICONES/paas.png" style="width: 250px; border-radius: 10px; margin-top: 30px;">
+            </div>`;
+    } else if(iaasLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">IaaS</button>
+                </div>
+                <p><strong> • IaaS:</strong> É um modelo de computação em nuvem que oferece recursos de infraestrutura, como servidores, armazenamento e redes, de forma escalável. Em vez de precisar investir em equipamentos físicos, as empresas alugam esses recursos de provedores de nuvem. O IaaS permite que as empresas gerenciem suas próprias aplicações e sistemas operacionais, mas sem se preocupar com a manutenção do hardware.</p>
+                <img src="../ICONES/iaas.png" style="width: 250px; border-radius: 30px; margin-top: 10px;">
+            </div>`;
+    } else if(virtualizacaoLista.includes(conteudo)){
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">Virtualização</button>
+                </div>
+                <p><strong> • Virtualização:</strong> A virtualização é uma tecnologia que permite criar versões "virtuais" de recursos físicos, como servidores, sistemas operacionais ou redes, dentro de um único hardware físico. Isso é feito através de um software chamado hipervisor, que divide o hardware em várias máquinas virtuais independentes, permitindo que elas funcionem como se fossem sistemas separados. Por exemplo, em vez de ter vários servidores físicos, uma empresa pode usar um único servidor físico para rodar várias máquinas virtuais.</p>
+                <img src="../ICONES/virtualizacao.jpg" style="width: 250px; border-radius: 10px; margin-top: 30px;">
+            </div>`;
+    }else{
+        resultado.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <div style="text-align: right; margin-bottom: 40px; margin-top: 40px; margin-right: 20px;">
+                    <button style="padding:5px; padding-left:10px; padding-right:10px; border-radius:20px 20px 0px 20px; border:0px;">akjwdi</button>
+                </div>
+                <p>Não entendi o que você quis dizer por favor repita.</p>
+            </div>`;
+    }
+    input.value = "";
+    input.focus();
+    window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+    });
+}
+
+    input.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); 
+            botao.click(); 
+        }
+    });
+ </script>
+</html>
